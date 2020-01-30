@@ -30,7 +30,16 @@ $pass.classList.remove(`error`)
 
 // ****** INTERACTIVE EVENT LISTENERS ******
 // Capture the .signin click
+$signin.addEventListener('click', event => { console.log('click') })
+
 // Capture the .close click
+$close.addEventListener('click', event => { console.log('click') })
+
 // Capture the .submit click
+$submit.addEventListener('click', event => { console.log('click') })
+
 // Capture the focus of #user
+$user.addEventListener('focus', event => { console.log('focus') })
+
 // Capture the focus of #pass
+$pass.addEventListener('focus', event => { console.log('focus') })
