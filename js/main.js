@@ -4,7 +4,8 @@ let $user =   document.querySelector('#user')
 let $pass =   document.querySelector('#pass')
 let $signin = document.querySelector('.signin')
 let $close =  document.querySelector('.close')
-let $submit = document.querySelector('.submit')
+// let $submit = document.querySelector('.submit')
+let $form =   document.querySelector('.getstarted')
 
 
 // ****** UI MODIFICATIONS ******
@@ -24,16 +25,6 @@ $close.addEventListener('click', event => {
 })
 
 
-// Capture the .submit click
-$submit.addEventListener('click', event => { 
-  // Add .error to #user
-  $user.classList.add(`error`)
-
-  // Add .error to #pass
-  $pass.classList.add(`error`)
-})
-
-
 // Capture the focus of #user
 $user.addEventListener('focus', event => { 
   // Remove .error from #user
@@ -46,3 +37,21 @@ $pass.addEventListener('focus', event => {
   // Remove .error from #pass
   $pass.classList.remove(`error`)
 })
+
+
+$form.addEventListener('submit', event => {
+  event.preventDefault();
+
+  // Add .error to #user
+  $user.classList.add(`error`)
+
+  // Add .error to #pass
+  $pass.classList.add(`error`)
+})
+
+
+/* 
+if ( ) {
+
+} 
+*/
