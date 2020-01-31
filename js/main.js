@@ -5,6 +5,7 @@ let $pass =   document.querySelector('#pass')
 let $signin = document.querySelector('.signin')
 let $close =  document.querySelector('.close')
 let $submit = document.querySelector('.submit')
+let $form =   document.querySelector('.getstarted')
 
 
 // ****** UI CHANGES *******
@@ -21,14 +22,6 @@ $close.addEventListener('click', event => {
   $modal.style.display = 'none'
 })
 
-// Capture .submit click
-$submit.addEventListener('click', event => {
-  // Add .error class to #user
-  $user.classList.add('error')
-
-  // Add .error class to #pass
-  $pass.classList.add('error')
-})
 
 // Capture #user focus
 $user.addEventListener('focus', event => {
@@ -42,5 +35,16 @@ $pass.addEventListener('focus', event => {
   $pass.classList.remove('error')
 })
 
+// Capture form submit
+$form.addEventListener('submit', event => { 
+  
+  event.preventDefault()  // Stop the form from submitting
 
+  // Add .error class to #user
+  $user.classList.add('error')
+
+  // Add .error class to #pass
+  $pass.classList.add('error')
+
+})
 
