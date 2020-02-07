@@ -26,7 +26,7 @@
     let $close = document.querySelector('.close');
     let $click = document.querySelector('.click');
     let $submit = document.querySelector('.submit');
-    let $form = document.querySelection('.getstarted');
+    let $form = document.querySelector('.getstarted');
     
         // You can go to your website>inspect and test each individual element to make sure that no errors show up and that they are in fact referring to the element that you want. 
     
@@ -42,22 +42,25 @@
     // ***** EVENET LISTENERS *****
         // ele.addEventListener('action', event => {outcome});
     // capture .signin click
-    $signin.addEventListener('click', event => { $modal.style.display = ('block')});
+    $signin.addEventListener('click', event => { 
+        $modal.style.display = ('block')
+    });
     // capture .close click
-    $close.addEventListener('click', event => { $modal.style.display = ('none')});
+    $close.addEventListener('click', event => { 
+        $modal.style.display = ('none')
+    });
     // capture. submit click
     $form.addEventListener('submit', event => {
         event.preventDefault() //stop from from submitting
         $user.classList.add('error')
         $pass.classList.add('error')
     });
-    // capture #user focus
     $user.addEventListener('foucs', event => { 
-        $user.classList.remove('error')});
-    
-    // capture # pass focus
+        $user.classList.remove('error')
+    });
     $pass.addEventListener('focus', event => {
-        $pass.classList.remove('error')});
+        $pass.classList.remove('error')
+    });
     
     
     
