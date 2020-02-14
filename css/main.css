@@ -42,6 +42,7 @@ button.signin {
   -webkit-transition: all 100ms;
   transition: all 100ms;
   cursor: pointer;
+  
 }
 
 button.signin:hover {
